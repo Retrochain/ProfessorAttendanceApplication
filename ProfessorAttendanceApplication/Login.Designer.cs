@@ -73,6 +73,8 @@
             // logoPanel
             // 
             logoPanel.BackColor = Color.OrangeRed;
+            logoPanel.BackgroundImage = (Image)resources.GetObject("logoPanel.BackgroundImage");
+            logoPanel.BackgroundImageLayout = ImageLayout.Center;
             logoPanel.Dock = DockStyle.Left;
             logoPanel.ForeColor = Color.Black;
             logoPanel.Location = new Point(0, 50);
@@ -135,6 +137,7 @@
             passwordInput.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             passwordInput.Location = new Point(395, 361);
             passwordInput.Name = "passwordInput";
+            passwordInput.PasswordChar = '*';
             passwordInput.Size = new Size(299, 38);
             passwordInput.TabIndex = 22;
             // 
@@ -165,6 +168,7 @@
             // 
             // utdIdInput
             // 
+            utdIdInput.AutoCompleteMode = AutoCompleteMode.Suggest;
             utdIdInput.BorderStyle = BorderStyle.FixedSingle;
             utdIdInput.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             utdIdInput.Location = new Point(395, 258);
