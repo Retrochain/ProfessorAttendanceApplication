@@ -42,12 +42,21 @@
             lastNameInput = new TextBox();
             midInitialInput = new TextBox();
             utdIdLabel = new Label();
-            passwordLabel = new Label();
+            setasswordLabel = new Label();
             utdEmailLabel = new Label();
             utdEmailInput = new TextBox();
             label6 = new Label();
             creditLabel = new Label();
             registerBtn = new Button();
+            confirmPasswordLabel = new Label();
+            confirmPasswordInput = new TextBox();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label7 = new Label();
+            clearBtn = new Button();
             header.SuspendLayout();
             SuspendLayout();
             // 
@@ -92,7 +101,7 @@
             registerLabel.AutoSize = true;
             registerLabel.Font = new Font("Segoe UI", 37.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
             registerLabel.ForeColor = Color.Snow;
-            registerLabel.Location = new Point(487, 98);
+            registerLabel.Location = new Point(493, 53);
             registerLabel.Name = "registerLabel";
             registerLabel.Size = new Size(261, 85);
             registerLabel.TabIndex = 17;
@@ -102,8 +111,8 @@
             // 
             firstNameInput.BorderStyle = BorderStyle.FixedSingle;
             firstNameInput.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            firstNameInput.Location = new Point(402, 235);
-            firstNameInput.MaxLength = 10;
+            firstNameInput.Location = new Point(402, 180);
+            firstNameInput.MaxLength = 0;
             firstNameInput.Name = "firstNameInput";
             firstNameInput.PlaceholderText = " John";
             firstNameInput.Size = new Size(200, 38);
@@ -114,7 +123,7 @@
             middleInitialLabel.AutoSize = true;
             middleInitialLabel.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             middleInitialLabel.ForeColor = Color.Snow;
-            middleInitialLabel.Location = new Point(395, 295);
+            middleInitialLabel.Location = new Point(395, 239);
             middleInitialLabel.Name = "middleInitialLabel";
             middleInitialLabel.Size = new Size(151, 31);
             middleInitialLabel.TabIndex = 22;
@@ -124,18 +133,19 @@
             // 
             passwordInput.BorderStyle = BorderStyle.FixedSingle;
             passwordInput.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            passwordInput.Location = new Point(402, 464);
-            passwordInput.MaxLength = 10;
+            passwordInput.Location = new Point(402, 405);
+            passwordInput.MaxLength = 16;
             passwordInput.Name = "passwordInput";
+            passwordInput.PasswordChar = '*';
             passwordInput.Size = new Size(299, 38);
-            passwordInput.TabIndex = 25;
+            passwordInput.TabIndex = 28;
             // 
             // firstNameLabel1
             // 
             firstNameLabel1.AutoSize = true;
             firstNameLabel1.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             firstNameLabel1.ForeColor = Color.Snow;
-            firstNameLabel1.Location = new Point(395, 201);
+            firstNameLabel1.Location = new Point(395, 146);
             firstNameLabel1.Name = "firstNameLabel1";
             firstNameLabel1.Size = new Size(127, 31);
             firstNameLabel1.TabIndex = 24;
@@ -145,73 +155,74 @@
             // 
             utdIdInput.BorderStyle = BorderStyle.FixedSingle;
             utdIdInput.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            utdIdInput.Location = new Point(402, 377);
+            utdIdInput.Location = new Point(402, 319);
             utdIdInput.MaxLength = 10;
             utdIdInput.Name = "utdIdInput";
             utdIdInput.PlaceholderText = "1234567890";
             utdIdInput.Size = new Size(134, 38);
-            utdIdInput.TabIndex = 27;
+            utdIdInput.TabIndex = 26;
             // 
             // lastNameLabel
             // 
             lastNameLabel.AutoSize = true;
             lastNameLabel.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lastNameLabel.ForeColor = Color.Snow;
-            lastNameLabel.Location = new Point(621, 201);
+            lastNameLabel.Location = new Point(621, 146);
             lastNameLabel.Name = "lastNameLabel";
-            lastNameLabel.Size = new Size(123, 31);
+            lastNameLabel.Size = new Size(129, 31);
             lastNameLabel.TabIndex = 26;
-            lastNameLabel.Text = "Last Name";
+            lastNameLabel.Text = "Last Name ";
             // 
             // lastNameInput
             // 
             lastNameInput.BorderStyle = BorderStyle.FixedSingle;
             lastNameInput.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lastNameInput.Location = new Point(626, 235);
-            lastNameInput.MaxLength = 10;
+            lastNameInput.Location = new Point(626, 180);
+            lastNameInput.MaxLength = 0;
             lastNameInput.Name = "lastNameInput";
             lastNameInput.PlaceholderText = " Doe";
             lastNameInput.Size = new Size(200, 38);
-            lastNameInput.TabIndex = 28;
+            lastNameInput.TabIndex = 24;
             // 
             // midInitialInput
             // 
             midInitialInput.BorderStyle = BorderStyle.FixedSingle;
             midInitialInput.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            midInitialInput.Location = new Point(552, 293);
-            midInitialInput.MaxLength = 10;
+            midInitialInput.Location = new Point(552, 237);
+            midInitialInput.MaxLength = 1;
             midInitialInput.Name = "midInitialInput";
+            midInitialInput.PlaceholderText = " P";
             midInitialInput.Size = new Size(50, 38);
-            midInitialInput.TabIndex = 29;
+            midInitialInput.TabIndex = 25;
             // 
             // utdIdLabel
             // 
             utdIdLabel.AutoSize = true;
             utdIdLabel.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             utdIdLabel.ForeColor = Color.Snow;
-            utdIdLabel.Location = new Point(395, 343);
+            utdIdLabel.Location = new Point(395, 285);
             utdIdLabel.Name = "utdIdLabel";
             utdIdLabel.Size = new Size(90, 31);
             utdIdLabel.TabIndex = 30;
             utdIdLabel.Text = "UTD ID";
             // 
-            // passwordLabel
+            // setasswordLabel
             // 
-            passwordLabel.AutoSize = true;
-            passwordLabel.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            passwordLabel.ForeColor = Color.Snow;
-            passwordLabel.Location = new Point(395, 430);
-            passwordLabel.Name = "passwordLabel";
-            passwordLabel.Size = new Size(112, 31);
-            passwordLabel.TabIndex = 31;
-            passwordLabel.Text = "Password";
+            setasswordLabel.AutoSize = true;
+            setasswordLabel.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            setasswordLabel.ForeColor = Color.Snow;
+            setasswordLabel.Location = new Point(395, 371);
+            setasswordLabel.Name = "setasswordLabel";
+            setasswordLabel.Size = new Size(151, 31);
+            setasswordLabel.TabIndex = 31;
+            setasswordLabel.Text = "Set Password";
             // 
             // utdEmailLabel
             // 
             utdEmailLabel.AutoSize = true;
             utdEmailLabel.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
             utdEmailLabel.ForeColor = Color.Snow;
-            utdEmailLabel.Location = new Point(552, 343);
+            utdEmailLabel.Location = new Point(552, 285);
             utdEmailLabel.Name = "utdEmailLabel";
             utdEmailLabel.Size = new Size(122, 31);
             utdEmailLabel.TabIndex = 32;
@@ -221,12 +232,12 @@
             // 
             utdEmailInput.BorderStyle = BorderStyle.FixedSingle;
             utdEmailInput.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            utdEmailInput.Location = new Point(556, 377);
-            utdEmailInput.MaxLength = 10;
+            utdEmailInput.Location = new Point(552, 319);
+            utdEmailInput.MaxLength = 0;
             utdEmailInput.Name = "utdEmailInput";
             utdEmailInput.PlaceholderText = " jxd567890@utdallas.edu";
-            utdEmailInput.Size = new Size(270, 38);
-            utdEmailInput.TabIndex = 33;
+            utdEmailInput.Size = new Size(274, 38);
+            utdEmailInput.TabIndex = 27;
             // 
             // label6
             // 
@@ -256,12 +267,127 @@
             registerBtn.FlatStyle = FlatStyle.Popup;
             registerBtn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             registerBtn.ForeColor = SystemColors.HighlightText;
-            registerBtn.Location = new Point(402, 528);
+            registerBtn.Location = new Point(402, 547);
             registerBtn.Name = "registerBtn";
             registerBtn.Size = new Size(120, 55);
-            registerBtn.TabIndex = 36;
+            registerBtn.TabIndex = 30;
             registerBtn.Text = "Register";
             registerBtn.UseVisualStyleBackColor = false;
+            registerBtn.Click += registerBtn_Click;
+            // 
+            // confirmPasswordLabel
+            // 
+            confirmPasswordLabel.AutoSize = true;
+            confirmPasswordLabel.Font = new Font("Segoe UI Semibold", 13.8F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            confirmPasswordLabel.ForeColor = Color.Snow;
+            confirmPasswordLabel.Location = new Point(395, 452);
+            confirmPasswordLabel.Name = "confirmPasswordLabel";
+            confirmPasswordLabel.Size = new Size(202, 31);
+            confirmPasswordLabel.TabIndex = 29;
+            confirmPasswordLabel.Text = "Confirm Password";
+            // 
+            // confirmPasswordInput
+            // 
+            confirmPasswordInput.BorderStyle = BorderStyle.FixedSingle;
+            confirmPasswordInput.Font = new Font("Segoe UI", 13.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            confirmPasswordInput.Location = new Point(402, 486);
+            confirmPasswordInput.MaxLength = 16;
+            confirmPasswordInput.Name = "confirmPasswordInput";
+            confirmPasswordInput.PasswordChar = '*';
+            confirmPasswordInput.Size = new Size(299, 38);
+            confirmPasswordInput.TabIndex = 29;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Red;
+            label1.Location = new Point(517, 138);
+            label1.Name = "label1";
+            label1.Size = new Size(29, 38);
+            label1.TabIndex = 36;
+            label1.Text = "*";
+            label1.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Red;
+            label2.Location = new Point(740, 138);
+            label2.Name = "label2";
+            label2.Size = new Size(29, 38);
+            label2.TabIndex = 37;
+            label2.Text = "*";
+            label2.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.Red;
+            label3.Location = new Point(480, 278);
+            label3.Name = "label3";
+            label3.Size = new Size(29, 38);
+            label3.TabIndex = 38;
+            label3.Text = "*";
+            label3.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.BackColor = Color.Transparent;
+            label4.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Red;
+            label4.Location = new Point(669, 278);
+            label4.Name = "label4";
+            label4.Size = new Size(29, 38);
+            label4.TabIndex = 39;
+            label4.Text = "*";
+            label4.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.BackColor = Color.Transparent;
+            label5.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.ForeColor = Color.Red;
+            label5.Location = new Point(541, 361);
+            label5.Name = "label5";
+            label5.Size = new Size(29, 38);
+            label5.TabIndex = 40;
+            label5.Text = "*";
+            label5.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.BackColor = Color.Transparent;
+            label7.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.ForeColor = Color.Red;
+            label7.Location = new Point(591, 445);
+            label7.Name = "label7";
+            label7.Size = new Size(29, 38);
+            label7.TabIndex = 41;
+            label7.Text = "*";
+            label7.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // clearBtn
+            // 
+            clearBtn.BackColor = Color.DarkOrange;
+            clearBtn.FlatStyle = FlatStyle.Popup;
+            clearBtn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            clearBtn.ForeColor = SystemColors.HighlightText;
+            clearBtn.Location = new Point(541, 547);
+            clearBtn.Name = "clearBtn";
+            clearBtn.Size = new Size(120, 55);
+            clearBtn.TabIndex = 31;
+            clearBtn.Text = "Clear";
+            clearBtn.UseVisualStyleBackColor = false;
+            clearBtn.Click += clearBtn_Click;
             // 
             // Register
             // 
@@ -269,8 +395,17 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.WindowFrame;
             ClientSize = new Size(870, 700);
-            Controls.Add(registerBtn);
+            Controls.Add(clearBtn);
+            Controls.Add(label7);
+            Controls.Add(label5);
+            Controls.Add(label4);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(firstNameLabel1);
+            Controls.Add(confirmPasswordLabel);
+            Controls.Add(confirmPasswordInput);
+            Controls.Add(registerBtn);
             Controls.Add(firstNameInput);
             Controls.Add(lastNameLabel);
             Controls.Add(lastNameInput);
@@ -280,7 +415,7 @@
             Controls.Add(utdIdInput);
             Controls.Add(utdEmailLabel);
             Controls.Add(utdEmailInput);
-            Controls.Add(passwordLabel);
+            Controls.Add(setasswordLabel);
             Controls.Add(passwordInput);
             Controls.Add(label6);
             Controls.Add(creditLabel);
@@ -288,6 +423,7 @@
             Controls.Add(logoPanel);
             Controls.Add(header);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Register";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Register";
@@ -311,11 +447,20 @@
         private TextBox lastNameInput;
         private TextBox midInitialInput;
         private Label utdIdLabel;
-        private Label passwordLabel;
+        private Label setasswordLabel;
         private Label utdEmailLabel;
         private TextBox utdEmailInput;
         private Label label6;
         private Label creditLabel;
         private Button registerBtn;
+        private Label confirmPasswordLabel;
+        private TextBox confirmPasswordInput;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Label label4;
+        private Label label5;
+        private Label label7;
+        private Button clearBtn;
     }
 }

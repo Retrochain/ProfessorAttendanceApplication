@@ -42,6 +42,10 @@
             label6 = new Label();
             creditLabel = new Label();
             confirmBtn = new Button();
+            label1 = new Label();
+            label2 = new Label();
+            label3 = new Label();
+            clearBtn = new Button();
             header.SuspendLayout();
             SuspendLayout();
             // 
@@ -143,7 +147,7 @@
             confirmPasswordInput.Name = "confirmPasswordInput";
             confirmPasswordInput.PasswordChar = '*';
             confirmPasswordInput.Size = new Size(299, 38);
-            confirmPasswordInput.TabIndex = 28;
+            confirmPasswordInput.TabIndex = 27;
             // 
             // confirmPasswordLabel
             // 
@@ -187,9 +191,63 @@
             confirmBtn.Location = new Point(394, 523);
             confirmBtn.Name = "confirmBtn";
             confirmBtn.Size = new Size(120, 55);
-            confirmBtn.TabIndex = 38;
+            confirmBtn.TabIndex = 28;
             confirmBtn.Text = "Confirm";
             confirmBtn.UseVisualStyleBackColor = false;
+            confirmBtn.Click += confirmBtn_Click;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.BackColor = Color.Transparent;
+            label1.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Red;
+            label1.Location = new Point(533, 242);
+            label1.Name = "label1";
+            label1.Size = new Size(29, 38);
+            label1.TabIndex = 38;
+            label1.Text = "*";
+            label1.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Red;
+            label2.Location = new Point(608, 323);
+            label2.Name = "label2";
+            label2.Size = new Size(29, 38);
+            label2.TabIndex = 39;
+            label2.Text = "*";
+            label2.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.Red;
+            label3.Location = new Point(583, 421);
+            label3.Name = "label3";
+            label3.Size = new Size(29, 38);
+            label3.TabIndex = 40;
+            label3.Text = "*";
+            label3.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // clearBtn
+            // 
+            clearBtn.BackColor = Color.DarkOrange;
+            clearBtn.FlatStyle = FlatStyle.Popup;
+            clearBtn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            clearBtn.ForeColor = SystemColors.HighlightText;
+            clearBtn.Location = new Point(533, 523);
+            clearBtn.Name = "clearBtn";
+            clearBtn.Size = new Size(120, 55);
+            clearBtn.TabIndex = 41;
+            clearBtn.Text = "Clear";
+            clearBtn.UseVisualStyleBackColor = false;
+            clearBtn.Click += clearBtn_Click;
             // 
             // ForgotPassword
             // 
@@ -197,6 +255,10 @@
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.WindowFrame;
             ClientSize = new Size(870, 700);
+            Controls.Add(clearBtn);
+            Controls.Add(label3);
+            Controls.Add(label2);
+            Controls.Add(label1);
             Controls.Add(confirmBtn);
             Controls.Add(label6);
             Controls.Add(creditLabel);
@@ -210,6 +272,7 @@
             Controls.Add(logoPanel);
             Controls.Add(header);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "ForgotPassword";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "ForgotPassword";
@@ -233,5 +296,9 @@
         private Label label6;
         private Label creditLabel;
         private Button confirmBtn;
+        private Label label1;
+        private Label label2;
+        private Label label3;
+        private Button clearBtn;
     }
 }

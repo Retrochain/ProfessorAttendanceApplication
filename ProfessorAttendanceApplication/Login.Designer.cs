@@ -43,6 +43,8 @@
             utdIdLabel = new Label();
             loginLabel = new Label();
             discLabel = new Label();
+            label2 = new Label();
+            label3 = new Label();
             header.SuspendLayout();
             SuspendLayout();
             // 
@@ -160,7 +162,7 @@
             registerLink.Location = new Point(633, 172);
             registerLink.Name = "registerLink";
             registerLink.Size = new Size(200, 31);
-            registerLink.TabIndex = 18;
+            registerLink.TabIndex = 25;
             registerLink.TabStop = true;
             registerLink.Text = "Create an account";
             registerLink.VisitedLinkColor = Color.Brown;
@@ -212,12 +214,40 @@
             discLabel.TabIndex = 17;
             discLabel.Text = "Don't have an account?";
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.BackColor = Color.Transparent;
+            label2.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.Red;
+            label2.Location = new Point(533, 218);
+            label2.Name = "label2";
+            label2.Size = new Size(29, 38);
+            label2.TabIndex = 37;
+            label2.Text = "*";
+            label2.TextAlign = ContentAlignment.MiddleLeft;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.BackColor = Color.Transparent;
+            label3.Font = new Font("Segoe UI", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label3.ForeColor = Color.Red;
+            label3.Location = new Point(556, 320);
+            label3.Name = "label3";
+            label3.Size = new Size(29, 38);
+            label3.TabIndex = 38;
+            label3.Text = "*";
+            label3.TextAlign = ContentAlignment.MiddleLeft;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.WindowFrame;
             ClientSize = new Size(870, 700);
+            Controls.Add(label3);
+            Controls.Add(label2);
             Controls.Add(logoPanel);
             Controls.Add(header);
             Controls.Add(label1);
@@ -232,6 +262,7 @@
             Controls.Add(loginLabel);
             Controls.Add(discLabel);
             FormBorderStyle = FormBorderStyle.None;
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "Login";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Login";
@@ -256,5 +287,7 @@
         private Label utdIdLabel;
         private Label loginLabel;
         private Label discLabel;
+        private Label label2;
+        private Label label3;
     }
 }
