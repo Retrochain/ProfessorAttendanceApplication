@@ -17,6 +17,9 @@ namespace ProfessorAttendanceApplication
         // We call the clear class that allows us to clear all textbox inputs in our form
         Clear clear = new Clear();
 
+        // We call the hashing class that allows us to hash our passwords using BCrypt
+        Hashing hash = new Hashing();
+
         // The variable cnn is being initialized to contain the connection string for the database
         MySqlConnection cnn = new MySqlConnection(Connection.ConnectionString);
 
@@ -38,6 +41,12 @@ namespace ProfessorAttendanceApplication
             Login login = new Login();
             login.Show();
             this.Close();
+        }
+
+        // On press, clear all textbox contents in this form
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            clear.ClearAllText(this);
         }
 
         // Upon clicking the Register button, the professor's information should be saved into the database.
@@ -102,7 +111,8 @@ namespace ProfessorAttendanceApplication
                             cmd.Parameters.Add("@ProfessorLastName", MySqlDbType.VarChar).Value = lastNameInput.Text;
                             cmd.Parameters.Add("@ProfessorEmail", MySqlDbType.VarChar).Value = utdEmailInput.Text;
                             cmd.Parameters.Add("@ProfessorUserName", MySqlDbType.VarChar).Value = username;
-                            cmd.Parameters.Add("@ProfessorPassword", MySqlDbType.VarChar).Value = passwordInput.Text;
+                            // We must hash our passwords when we store them in our database
+                            cmd.Parameters.Add("@ProfessorPassword", MySqlDbType.VarChar).Value = hash.HashPassword(passwordInput.Text);
 
                             // We use a try and catch statement to catch any SQL errors
                             try
@@ -146,12 +156,6 @@ namespace ProfessorAttendanceApplication
             {
                 MessageBox.Show("Please enter all the required information! \n", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
-
-        // On press, clear all textbox contents in this form
-        private void clearBtn_Click(object sender, EventArgs e)
-        {
-            clear.ClearAllText(this);
         }
     }
 }

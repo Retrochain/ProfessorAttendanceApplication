@@ -36,3 +36,4 @@ C:\Users\aksha_3pixmpy\source\repos\ProfessorAttendanceApplication\ProfessorAtte
 C:\Users\aksha_3pixmpy\source\repos\ProfessorAttendanceApplication\ProfessorAttendanceApplication\obj\Debug\net8.0-windows\ProfessorAttendanceApplication.ForgotPassword.resources
 C:\Users\aksha_3pixmpy\source\repos\ProfessorAttendanceApplication\ProfessorAttendanceApplication\obj\Debug\net8.0-windows\ProfessorAttendanceApplication.Properties.Resources.resources
 C:\Users\aksha_3pixmpy\source\repos\ProfessorAttendanceApplication\ProfessorAttendanceApplication\obj\Debug\net8.0-windows\ProfessorAttendanceApplication.sourcelink.json
+C:\Users\aksha_3pixmpy\source\repos\ProfessorAttendanceApplication\ProfessorAttendanceApplication\bin\Debug\net8.0-windows\BCrypt.Net-Next.dll

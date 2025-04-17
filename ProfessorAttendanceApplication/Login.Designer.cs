@@ -45,6 +45,7 @@
             discLabel = new Label();
             label2 = new Label();
             label3 = new Label();
+            clearBtn = new Button();
             header.SuspendLayout();
             SuspendLayout();
             // 
@@ -112,7 +113,7 @@
             forgotPassBtn.FlatStyle = FlatStyle.Popup;
             forgotPassBtn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             forgotPassBtn.ForeColor = SystemColors.HighlightText;
-            forgotPassBtn.Location = new Point(395, 506);
+            forgotPassBtn.Location = new Point(395, 497);
             forgotPassBtn.Name = "forgotPassBtn";
             forgotPassBtn.Size = new Size(181, 73);
             forgotPassBtn.TabIndex = 24;
@@ -240,12 +241,27 @@
             label3.Text = "*";
             label3.TextAlign = ContentAlignment.MiddleLeft;
             // 
+            // clearBtn
+            // 
+            clearBtn.BackColor = Color.DarkOrange;
+            clearBtn.FlatStyle = FlatStyle.Popup;
+            clearBtn.Font = new Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            clearBtn.ForeColor = SystemColors.HighlightText;
+            clearBtn.Location = new Point(533, 431);
+            clearBtn.Name = "clearBtn";
+            clearBtn.Size = new Size(123, 51);
+            clearBtn.TabIndex = 42;
+            clearBtn.Text = "Clear";
+            clearBtn.UseVisualStyleBackColor = false;
+            clearBtn.Click += clearBtn_Click;
+            // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.WindowFrame;
             ClientSize = new Size(870, 700);
+            Controls.Add(clearBtn);
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(logoPanel);
@@ -289,5 +305,6 @@
         private Label discLabel;
         private Label label2;
         private Label label3;
+        private Button clearBtn;
     }
 }

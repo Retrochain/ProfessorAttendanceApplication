@@ -17,6 +17,12 @@ namespace ProfessorAttendanceApplication
         // We call the drag class that allows us to make our form draggable
         Drag drag = new Drag();
 
+        // We call the clear class that allows us to clear all textbox inputs in our form
+        Clear clear = new Clear();
+
+        // We call the hashing class that allows us to hash our passwords using BCrypt
+        Hashing hash = new Hashing();
+
         // The variable cnn is being initialized to contain the connection string for the database
         MySqlConnection cnn = new MySqlConnection(Connection.ConnectionString);
 
@@ -103,8 +109,12 @@ namespace ProfessorAttendanceApplication
                             // We get the password of the current user using the reader
                             string? pwd = reader["password"].ToString();
 
-                            // And compare it with the entered password
-                            if (pwd == passwordInput.Text)
+                            // And first we check if the password is empty in the database or not
+                            if (string.IsNullOrEmpty(pwd))
+                            {
+                                MessageBox.Show("Password not set up yet, please create a password. \n", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                            } // Then we compare the password with the user input password
+                            else if (hash.VerifyPassword(passwordInput.Text, pwd))
                             {
                                 MessageBox.Show("Login Success! \n", "Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
                             }
@@ -136,6 +146,12 @@ namespace ProfessorAttendanceApplication
             ForgotPassword forgotpassword = new ForgotPassword();
             forgotpassword.Show();
             this.Hide();
+        }
+
+        // On press, clear all textbox contents in this form
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+            clear.ClearAllText(this);
         }
 
         // This link opens up the registration form and hides the current one
