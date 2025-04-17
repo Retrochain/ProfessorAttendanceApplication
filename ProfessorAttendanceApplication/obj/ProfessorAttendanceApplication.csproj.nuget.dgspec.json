@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aksha_3pixmpy\\source\\repos\\ProfessorAttendanceApplication\\ProfessorAttendanceApplication\\ProfessorAttendanceApplication.csproj": {}
+    "C:\\Users\\dylan\\Source\\Repos\\ProfessorAttendanceApplication\\ProfessorAttendanceApplication\\ProfessorAttendanceApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aksha_3pixmpy\\source\\repos\\ProfessorAttendanceApplication\\ProfessorAttendanceApplication\\ProfessorAttendanceApplication.csproj": {
+    "C:\\Users\\dylan\\Source\\Repos\\ProfessorAttendanceApplication\\ProfessorAttendanceApplication\\ProfessorAttendanceApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aksha_3pixmpy\\source\\repos\\ProfessorAttendanceApplication\\ProfessorAttendanceApplication\\ProfessorAttendanceApplication.csproj",
+        "projectUniqueName": "C:\\Users\\dylan\\Source\\Repos\\ProfessorAttendanceApplication\\ProfessorAttendanceApplication\\ProfessorAttendanceApplication.csproj",
         "projectName": "ProfessorAttendanceApplication",
-        "projectPath": "C:\\Users\\aksha_3pixmpy\\source\\repos\\ProfessorAttendanceApplication\\ProfessorAttendanceApplication\\ProfessorAttendanceApplication.csproj",
-        "packagesPath": "C:\\Users\\aksha_3pixmpy\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aksha_3pixmpy\\source\\repos\\ProfessorAttendanceApplication\\ProfessorAttendanceApplication\\obj\\",
+        "projectPath": "C:\\Users\\dylan\\Source\\Repos\\ProfessorAttendanceApplication\\ProfessorAttendanceApplication\\ProfessorAttendanceApplication.csproj",
+        "packagesPath": "C:\\Users\\dylan\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dylan\\Source\\Repos\\ProfessorAttendanceApplication\\ProfessorAttendanceApplication\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\aksha_3pixmpy\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\dylan\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -79,7 +79,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
